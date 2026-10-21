@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bomba atomowa – historia, skutki, pamięć</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+:root{
+  --bg:#dcdfe0; --ink:#1a1f24; --mute:#59626a; --line:#b4babe; --panel:#e9ecec; --steel:#2f5d7c; --hand:#b3261e;
+  --head:"Archivo","Arial Narrow",Arial,sans-serif; --body:"Spectral",Georgia,"Times New Roman",serif;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#14181b; --ink:#e4e7e8; --mute:#9aa3a9; --line:#343b41; --panel:#1c2125; --steel:#7fb0d1; --hand:#e5594f}
+}
+:root[data-theme="dark"]{--bg:#14181b; --ink:#e4e7e8; --mute:#9aa3a9; --line:#343b41; --panel:#1c2125; --steel:#7fb0d1; --hand:#e5594f}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.125rem;line-height:1.65}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.25rem}
+h1,h2,h3{font-family:var(--head);font-stretch:75%;line-height:1.05;margin:0;letter-spacing:-.01em}
+.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:2rem;align-items:center;padding:3.5rem 0 3rem;border-bottom:1px solid var(--line)}
+.hero h1{font-size:clamp(3rem,9vw,6.4rem);font-weight:900}
+.hero p{max-width:34rem;color:var(--mute);margin:1.25rem 0 0}
+.hero time{display:block;font-family:var(--head);font-stretch:75%;font-weight:700;margin-top:1.5rem;font-size:1.1rem;color:var(--hand)}
+.clock{width:100%;max-width:21rem;justify-self:center}
+.clock .face{fill:var(--panel);stroke:var(--ink);stroke-width:3}
+.clock .tick{stroke:var(--ink);stroke-width:2}
+.clock .h{stroke:var(--ink);stroke-width:7;stroke-linecap:round}
+.clock .m{stroke:var(--hand);stroke-width:4;stroke-linecap:round}
+section{padding:3.25rem 0;border-bottom:1px solid var(--line)}
+h2{font-size:clamp(1.9rem,4.5vw,2.8rem);font-weight:800;margin-bottom:1.25rem}
+p{margin:0 0 1rem;max-width:42rem}
+.lead{color:var(--mute)}
+.tl{list-style:none;margin:1.5rem 0 0;padding:0 0 0 1.4rem;border-left:2px solid var(--steel);max-width:44rem}
+.tl li{position:relative;padding:0 0 1.5rem}
+.tl li::before{content:"";position:absolute;left:calc(-1.4rem - 7px);top:.55rem;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--steel)}
+.tl b{display:block;font-family:var(--head);font-stretch:75%;font-weight:800;font-size:1.25rem;color:var(--steel)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:1.5rem}
+.card{background:var(--panel);padding:1.4rem;border-left:4px solid var(--steel)}
+.card.n{border-left-color:var(--hand)}
+.card h3{font-size:1.7rem;font-weight:800;margin-bottom:.15rem}
+.card .d{font-family:var(--head);font-stretch:75%;font-weight:600;color:var(--mute);margin-bottom:.75rem}
+.card p{margin-bottom:.6rem}
+.note{font-size:.95rem;color:var(--mute);max-width:42rem}
+blockquote{margin:1.5rem 0;padding:0 0 0 1.25rem;border-left:4px solid var(--hand);font-style:italic;max-width:38rem}
+blockquote span{display:block;font-style:normal;font-size:.95rem;color:var(--mute);margin-top:.35rem}
+.tbl{overflow-x:auto;margin-top:1rem}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:1rem}
+th,td{text-align:left;padding:.65rem .8rem;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--head);font-stretch:75%;font-weight:800;color:var(--steel)}
+footer{padding:2.5rem 0 3rem;color:var(--mute);font-size:.95rem}
+@media (max-width:720px){.hero,.two{grid-template-columns:1fr}.clock{max-width:15rem}}
+</style>
+</head>
+<body>
+<header class="wrap hero">
+  <div>
+    <h1>Bomba atomowa</h1>
+    <p>Jak powstała pierwsza broń jądrowa, co stało się w Hiroszimie i Nagasaki oraz dlaczego do dziś jest to jeden z najważniejszych tematów światowej polityki.</p>
+    <time datetime="1945-08-06T08:15">6 sierpnia 1945, 8:15</time>
+  </div>
+  <svg class="clock" viewBox="0 0 200 200" role="img" aria-label="Zegar zatrzymany na godzinie 8:15">
+    <circle class="face" cx="100" cy="100" r="92"/>
+    <g class="tick">
+      <line x1="100" y1="14" x2="100" y2="26"/><line x1="100" y1="174" x2="100" y2="186"/>
+      <line x1="14" y1="100" x2="26" y2="100"/><line x1="174" y1="100" x2="186" y2="100"/>
+    </g>
+    <line class="h" x1="100" y1="100" x2="100" y2="56" transform="rotate(247.5 100 100)"/>
+    <line class="m" x1="100" y1="100" x2="100" y2="30" transform="rotate(90 100 100)"/>
+    <circle cx="100" cy="100" r="5" fill="var(--ink)"/>
+  </svg>
+</header>
+
+<main class="wrap">
+
+<section id="fizyka">
+  <h2>Na czym polega wybuch jądrowy</h2>
+  <p>Bomba atomowa wykorzystuje rozszczepienie jąder ciężkich pierwiastków, takich jak uran-235 lub pluton-239. Gdy jądro się rozpada, uwalnia ogromną energię oraz neutrony, które mogą rozbić kolejne jądra. Jeśli w materiale zajdzie szybka reakcja łańcuchowa, w ułamku sekundy wydziela się energia o skali nieosiągalnej dla zwykłych materiałów wybuchowych.</p>
+  <p>Skutki wybuchu to fala uderzeniowa, potężne promieniowanie cieplne, promieniowanie jonizujące oraz opad promieniotwórczy, który może skazić rozległe obszary na długi czas.</p>
+  <p class="note">Strona ma charakter historyczny i edukacyjny. Nie zawiera informacji technicznych o konstrukcji broni.</p>
+</section>
+
+<section id="historia">
+  <h2>Droga do pierwszego wybuchu</h2>
+  <ol class="tl">
+    <li><b>1938–1939</b>Niemieccy chemicy Otto Hahn i Fritz Strassmann odkrywają rozszczepienie uranu, a Lise Meitner i Otto Frisch interpretują je teoretycznie. Naukowcy zdają sobie sprawę, że można z tego zbudować broń.</li>
+    <li><b>1939</b>Leo Szilárd i Albert Einstein wysyłają list do prezydenta Roosevelta, ostrzegając, że nazistowskie Niemcy mogą pracować nad bombą.</li>
+    <li><b>2 grudnia 1942</b>Pod kierunkiem Enrico Fermiego w Chicago działa pierwszy reaktor jądrowy, Chicago Pile-1. Potwierdza on, że kontrolowana reakcja łańcuchowa jest możliwa.</li>
+    <li><b>1942–1945</b>Stany Zjednoczone prowadzą Projekt Manhattan, wspólnie z Wielką Brytanią i Kanadą. Naukowym kierownikiem laboratorium w Los Alamos jest Robert Oppenheimer, całość nadzoruje gen. Leslie Groves. W projekcie pracują dziesiątki tysięcy ludzi.</li>
+    <li><b>16 lipca 1945</b>Test Trinity na pustyni w Nowym Meksyku: pierwszy w historii wybuch jądrowy.</li>
+    <li><b>6 i 9 sierpnia 1945</b>Użycie bomb bojowych przeciwko Japonii.</li>
+  </ol>
+</section>
+
+<section id="japonia">
+  <h2>Hiroszima i Nagasaki</h2>
+  <p>To jedyne przypadki użycia broni jądrowej w czasie wojny. Liczby ofiar są szacunkowe, bo wiele osób zginęło w kolejnych tygodniach i miesiącach od oparzeń i choroby popromiennej, a część zapisów zniszczono.</p>
+  <div class="two">
+    <article class="card n">
+      <h3>Hiroszima</h3>
+      <div class="d">6 sierpnia 1945, 8:15 · bomba „Little Boy” (uran)</div>
+      <p>Szacuje się, że w pierwszych dniach zginęło kilkadziesiąt tysięcy ludzi, a do końca 1945 roku łącznie od około 90 do 140 tysięcy.</p>
+      <p>Większość zabudowy miasta została zniszczona. Do dziś stoi tam ruina Kopuły Bomby Atomowej, wpisana na listę UNESCO.</p>
+    </article>
+    <article class="card n">
+      <h3>Nagasaki</h3>
+      <div class="d">9 sierpnia 1945, 11:02 · bomba „Fat Man” (pluton)</div>
+      <p>Szacunki mówią o około 40 tysiącach zabitych od razu i od 60 do 80 tysięcy do końca 1945 roku.</p>
+      <p>Skalę zniszczeń ograniczył częściowo ukształtowanie terenu, w dolinach i wzgórzach miasta.</p>
+    </article>
+  </div>
+  <p style="margin-top:1.5rem">15 sierpnia cesarz Hirohito ogłosił kapitulację Japonii, a dokument podpisano 2 września 1945 roku. Historycy do dziś spierają się, w jakim stopniu o kapitulacji zdecydowały bombardowania, a w jakim wypowiedzenie wojny przez ZSRR 8 sierpnia. Spór dotyczy też tego, czy użycie bomby było moralnie i militarnie uzasadnione.</p>
+  <blockquote>Ocaleni z Hiroszimy i Nagasaki, zwani hibakusha, przez dekady apelowali, by nikt więcej nie doświadczył tego, co ich spotkało.<span>Hibakusha (jap.) – osoby poszkodowane przez bombę</span></blockquote>
+</section>
+
+<section id="polska">
+  <h2>Polskie wątki</h2>
+  <p><b>Józef Rotblat</b>, polski fizyk, pracował w Los Alamos, ale opuścił projekt pod koniec 1944 roku, gdy stało się jasne, że Niemcy nie zbudują bomby. Później współtworzył ruch Pugwash i w 1995 roku otrzymał Pokojową Nagrodę Nobla.</p>
+  <p><b>Stanisław Ulam</b>, matematyk ze Lwowa, również uczestniczył w pracach w Los Alamos. Jest też współtwórcą metody Monte Carlo i brał udział w pracach nad bombą wodorową.</p>
+</section>
+
+<section id="po-1945">
+  <h2>Po 1945 roku: wyścig zbrojeń i kontrola</h2>
+  <div class="tbl">
+  <table>
+    <thead><tr><th>Rok</th><th>Wydarzenie</th></tr></thead>
+    <tbody>
+      <tr><td>1949</td><td>Pierwszy sowiecki test jądrowy kończy amerykański monopol.</td></tr>
+      <tr><td>1952–1964</td><td>Próby jądrowe przeprowadzają kolejno Wielka Brytania, Francja i Chiny. W 1952 roku USA testują pierwszą bombę wodorową.</td></tr>
+      <tr><td>1961</td><td>ZSRR detonuje „Car-bombę”, największą eksplozję w historii, o mocy rzędu 50 megaton.</td></tr>
+      <tr><td>1962</td><td>Kryzys kubański – świat staje bliżej wojny jądrowej niż kiedykolwiek wcześniej.</td></tr>
+      <tr><td>1963</td><td>Układ o częściowym zakazie prób jądrowych: koniec testów w atmosferze, pod wodą i w kosmosie dla jego stron.</td></tr>
+      <tr><td>1968–1970</td><td>Traktat o nierozprzestrzenianiu broni jądrowej (NPT) podpisany w 1968 roku, w mocy od 1970.</td></tr>
+      <tr><td>1996</td><td>Podpisanie Traktatu o całkowitym zakazie prób jądrowych (CTBT). Nie wszedł jeszcze w życie, bo nie ratyfikowały go wszystkie wymagane państwa.</td></tr>
+      <tr><td>2017–2021</td><td>Traktat o zakazie broni jądrowej (TPNW) przyjęty w 2017 roku, w mocy od 2021. Państwa posiadające broń jądrową do niego nie przystąpiły.</td></tr>
+      <tr><td>2024</td><td>Pokojową Nagrodę Nobla otrzymuje japońska organizacja ocalałych Nihon Hidankyo.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="note" style="margin-top:1rem">Aktualne liczby głowic i stan porozumień zmieniają się, dlatego warto sprawdzać je w źródłach takich jak SIPRI czy Federation of American Scientists.</p>
+</section>
+
+<section id="pamiec" style="border-bottom:0">
+  <h2>Dlaczego to ważne</h2>
+  <p>Bomba atomowa zmieniła sposób, w jaki państwa myślą o wojnie, odstraszaniu i bezpieczeństwie. Spór o jej użycie w 1945 roku oraz o to, czy broń jądrowa zapobiega wojnom, czy zwiększa ryzyko katastrofy, trwa do dziś wśród historyków, polityków i ekspertów od bezpieczeństwa.</p>
+  <p>Najlepszym sposobem, by to zrozumieć, jest sięgnięcie do relacji świadków i opracowań historycznych, na przykład tych publikowanych przez Muzeum Pokoju w Hiroszimie i Muzeum Bomby Atomowej w Nagasaki.</p>
+</section>
+
+</main>
+<footer class="wrap">Strona informacyjna. Wszystkie liczby ofiar to szacunki historyków i różnią się w zależności od źródła.</footer>
+</body>
+</html>
